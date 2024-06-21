@@ -1,8 +1,10 @@
 import pyrogram
 from Instagram import InstaAPI
 
+username="djdjdjdkde"
+password="48484848444!$"
 app = pyrogram.Client(...)
-Instagram = InstaAPI()
+Instagram = InstaAPI(username, password)
 
 @app.on_inline_query(group=0)
 async def iginline(c,q):

@@ -4,7 +4,7 @@ from Instagram import InstaAPI
 app = pyrogram.Client(...)
 Instagram = InstaAPI()
 
-@app.on_inline_query(~BANNED_USERS, group=0)
+@app.on_inline_query(group=0)
 async def iginline(c,q):
   query = q.query
   if not (query and len(query.split(" ")) > 1 and query.split(" ")[0] == "!ig" and Instagram.exists(query.split(" ")[1])):
